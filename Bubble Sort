@@ -1,0 +1,17 @@
+Bubble Sort
+def bubble_sort(arr):
+    n = len(arr)
+    # Iterasi untuk setiap elemen dalam array
+    for i in range(n):
+        # Bandingkan setiap elemen berdekatan
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                # Tukar jika elemen lebih besar dari elemen selanjutnya
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+# Contoh penggunaan
+data = [64, 34, 25, 12, 22, 11, 90]
+print("Array sebelum disorting:", data)
+sorted_data = bubble_sort(data)
+print("Array setelah Bubble Sort:", sorted_data)
